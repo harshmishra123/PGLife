@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Box</title>
+  <style>
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      display: none;
+    }
+
+    .popup.active {
+      display: block;
+    }
+
+    .popup-heading {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .popup-subheading {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .popup-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .popup-buttons button {
+      background-color: black;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: box-shadow 0.3s;
+    }
+
+    .popup-buttons button.okay {
+      background-color: green;
+    }
+
+    .popup-buttons button:not(.okay):hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+  <img src="filter.png" alt="Image" id="image" onclick="showPopup()">
+
+  <div class="popup" id="popup">
+    <div class="popup-heading">Filters</div>
+    <div class="popup-subheading">Genders</div>
+    <div class="popup-buttons">
+      <button>No Filter</button>
+      <button>Male</button>
+      <button>Female</button>
+      <button>Unisex</button>
+      <button class="okay">Okay</button>
+    </div>
+  </div>
+
+  <script>
+    function showPopup() {
+      var popup = document.getElementById("popup");
+      popup.classList.toggle("active");
+    }
+  </script>
+</body>
+
+</html>

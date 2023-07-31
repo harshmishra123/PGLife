@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PGLife</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <a class="navbar-brand" href="majorsample.html"><img src="logo.png" alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#signupModal"><i class="fas fa-user-plus"></i> Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sign Up Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Create Account</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="fullName"><i class="fas fa-user"></i> Full Name</label>
+              <input type="text" class="form-control" id="fullName">
+            </div>
+            <div class="form-group">
+              <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+              <input type="text" class="form-control" id="phone">
+            </div>
+            <div class="form-group">
+              <label for="email"><i class="fas fa-envelope"></i> Email</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="password"><i class="fas fa-lock"></i> Password</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-venus-mars"></i> Gender</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                <label class="form-check-label" for="male">
+                  Male
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                <label class="form-check-label" for="female">
+                  Female
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+            <p>Already have an account?<a href="#">Login</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="email"><i class="fas fa-envelope"></i> Email</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="password"><i class="fas fa-lock"></i> Password</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+
+  <img src="filter.png" alt="Photo 1" class="photo" id="p1" onclick="showPopup()">
+    <img src="desc.png" alt="Photo 2" class="photo" id="p2">
+    <img src="asc.png" alt="Photo 3" class="photo" id="p3">
+  </div>
+    <ul class="breadcrumb">
+        <li><a href="majorsample.html">Home</a></li>
+        <li>Current Page</li>
+      </ul>
+      
+        
+        <section class="container">
+          <!--card1-->
+            <div class="card">
+              <span class="ratings">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </span>.
+            <div id="r-image">
+            <img src="1d4f0757fdb86d5f.jpg" alt="rent home"></div>
+            <h1 class="rooms" >Navkar Paying Guests</h1>
+            <p class="location">44,Juhu Scheme,Juhu,Mumbai,Maharastra-400058</p>
+            <h2 id="pay">Rs8500/-</h2>
+            <p class="pmonth">per month</p>
+            <button type="login-button" class="view">View</button>
+            <div class="gender">
+                <img src="male.png" alt="male">
+            </div>
+        </div>
+    <!--card2-->
+        <div class="card">
+          <span class="ratings">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </span>
+          <button class="view">
+            View
+           </button>
+           <div id="r-image">
+            <img src="eace7b9114fd6046.jpg" alt="Room Image"></div>
+            <h1 class="rooms">Ganpati Paying Guest</h2>
+            <p class="location">Police beat,sainath complex,besides S.V.Road,Daulat nagar borivali east,Mumbai-400066</p>
+            <h2 id="pay">Rs8500/-</h2>
+            <p class="pmonth">per month</p>
+            <div class="gender">
+                <img src="unisex.png" alt="both">
+            </div>
+          <button class="view">
+           View
+          </button>  
+        </div>
+        <!--card3-->
+        <div class="card">
+          <span class="ratings">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </span>
+          <div id="r-image">
+            <img src="eace7b9114fd6046.jpg" alt="Room Image"></div>
+            <h1 class="rooms">PG for Girls Borivali West</h2>
+            <p class="location">Plot no. 258/D4,Gorai no. 2,Borivali West,Mumbai, Maharastra-400092</p>
+            <h2 id="pay">Rs8000/-</h2>
+            <p class="pmonth">per month</p>
+            <div class="gender">
+                <img src="female.png" alt="female">
+            </div>
+          <button class="view">
+           View
+          </button>  
+        </div>
+        </section>
+    </div>
+    <div class="footer">
+      <a href="index.html">PG in Delhi</a>
+      <a href="mumbai.html">PG in Mumbai</a>
+      <a href="bangalore.html">PG in Bangalore</a>
+      <a href="hyderabad.html">PG in Hyderabad</a>
+    </div>
+    <div class="copyright">
+      &copy;PGLife 2023. All rights reserved.
+    </div>
+    
+    <script>
+        function showPopup() {
+      var popupContainer = document.getElementById('popup-container');
+      popupContainer.style.display = 'block';
+    }
+
+    function closePopup() {
+      var popupContainer = document.getElementById('popup-container');
+      popupContainer.style.display = 'none';
+    }
+
+    function applyFilter() {
+      var selectedOptions = document.querySelectorAll('.option-box:hover');
+      var filteredContent = ""; // Replace with your filtering logic
+
+      selectedOptions.forEach(function(option) {
+        filteredContent += option.innerHTML + "<br>";
+      });
+
+        // Display the filtered content
+        console.log(filteredContent);
+      
+        // Close the popup
+        closePopup();
+    }
+    </script>
+    <script>
+      const image = document.getElementById('image');
+      const popup = document.getElementById('popup');
+      const closeButton = document.querySelector('.close-button');
+  
+      image.addEventListener('click', function() {
+        popup.style.display = 'flex';
+      });
+  
+      closeButton.addEventListener('click', function() {
+        popup.style.display = 'none';
+      });
+    </script>
+</body>
+</html>
